@@ -59,8 +59,8 @@ class BiLSTMTagger(nn.Module):
     x=self.dropout(x)
     x,_=self.lstm(x)
     return self.fc(x)
-
-
+```
+```
 # Training and Evaluation Functions
 def train_model(model, train_loader, test_loader, loss_fn, optimizer, epochs=3):
     train_losses, val_losses = [], []
@@ -80,7 +80,8 @@ def train_model(model, train_loader, test_loader, loss_fn, optimizer, epochs=3):
             total_loss += loss.item()
 
         train_losses.append(total_loss)
-
+```
+```
         # Validation
         model.eval()
         val_loss = 0
